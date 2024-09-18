@@ -1,10 +1,11 @@
-num=int(input("enter a number"))
-val=str(num)
-rev=val[::-1]
-if(val==rev):
-    print("The number is palindrome")
+def fib(n):
+    if(n==0 or n==1):
+        return n
+    else:
+        return(fib(n-1)+fib(n-2))
+num=int(input("enter number"))
+if(num>=0):
+        f=fib(num)
+        print("fib sequence is",f)
 else:
-    print("The num is not palindrome")
-for i in range(10):
-    if(val.count(str(i))>0):
-        print(str(i),"appears",val.count(str(i)),"times")
+        print("not a valid number")
